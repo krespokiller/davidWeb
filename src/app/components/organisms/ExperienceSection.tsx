@@ -5,7 +5,8 @@ import { experiences } from '../../shared/constants/experiences';
 
 export const ExperienceSection: React.FC = () => {
   const [showAll, setShowAll] = useState(false);
-  const initialDisplayCount = 3;
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const initialDisplayCount = 2; // Mostrar solo 2 cards por defecto
   const displayedExperiences = showAll ? experiences : experiences.slice(0, initialDisplayCount);
 
   return (
@@ -16,34 +17,70 @@ export const ExperienceSection: React.FC = () => {
             Experience
           </Heading>
 
-          {/* Improved Responsive Grid Layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 mb-12">
-            {displayedExperiences.map((exp, index) => (
-              <div
-                key={index}
-                className={showAll ? "" : "max-h-80 overflow-hidden"}
-              >
-                <ExperienceItem
-                  company={exp.company}
-                  role={exp.role}
-                  dates={exp.dates}
-                  location={exp.location}
-                  description={exp.description}
-                  showFull={showAll}
-                />
-              </div>
-            ))}
-          </div>
+          {/* Responsive Layout with expansion support */}
+          {displayedExperiences.length === 2 ? (
+            // Centered layout for 2 items
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-12 md:justify-center md:max-w-5xl md:mx-auto">
+              {displayedExperiences.map((exp, index) => {
+                const isExpanded = expandedCard === index;
+                return (
+                  <div
+                    key={index}
+                    className={`transition-all duration-700 ease-in-out ${
+                      isExpanded ? 'md:flex-1 md:max-w-3xl' : 'md:flex-1 md:max-w-2xl'
+                    }`}
+                  >
+                    <ExperienceItem
+                      company={exp.company}
+                      role={exp.role}
+                      dates={exp.dates}
+                      location={exp.location}
+                      description={exp.description}
+                      isExpanded={isExpanded}
+                      onToggleExpand={() => setExpandedCard(isExpanded ? null : index)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            // Grid layout for 3+ items
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+              {displayedExperiences.map((exp, index) => {
+                const isExpanded = expandedCard === index;
+                return (
+                  <div
+                    key={index}
+                    className={`transition-all duration-700 ease-in-out ${
+                      isExpanded ? 'md:col-span-2 lg:col-span-3' : ''
+                    }`}
+                  >
+                    <ExperienceItem
+                      company={exp.company}
+                      role={exp.role}
+                      dates={exp.dates}
+                      location={exp.location}
+                      description={exp.description}
+                      isExpanded={isExpanded}
+                      onToggleExpand={() => setExpandedCard(isExpanded ? null : index)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          )}
 
           {/* Show More Button */}
           {experiences.length > initialDisplayCount && (
-            <div className="text-center">
-              <Button
-                onClick={() => setShowAll(!showAll)}
-                variant="secondary"
-              >
-                {showAll ? 'Ver Menos' : `Ver Más (${experiences.length - initialDisplayCount})`}
-              </Button>
+            <div className="text-center mt-8">
+              <div className="inline-block">
+                <Button
+                  onClick={() => setShowAll(!showAll)}
+                  variant="secondary"
+                >
+                  {showAll ? 'Ver Menos' : `Ver Todas las Experiencias (${experiences.length})`}
+                </Button>
+              </div>
             </div>
           )}
         </div>
