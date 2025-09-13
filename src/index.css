@@ -17,25 +17,27 @@
   }
 
   body {
-    @apply bg-dark text-light font-sans antialiased;
+    @apply bg-dark text-light font-light antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.5;
   }
 
   * {
-    @apply border-gray-600;
+    @apply border-gray-700;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-light hover:bg-secondary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-xl px-6 py-3 font-medium;
+    @apply bg-primary text-light hover:bg-secondary transition-all duration-300 rounded-lg px-6 py-2.5 font-medium text-sm tracking-wide;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-light hover:bg-accent transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-xl px-6 py-3 font-medium;
+    @apply bg-secondary text-light hover:bg-accent transition-all duration-300 rounded-lg px-6 py-2.5 font-medium text-sm tracking-wide;
   }
 
   .card {
-    @apply bg-gray-800 border border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] p-6;
+    @apply bg-gray-900/50 border border-gray-800/50 rounded-xl p-6;
   }
 
   .text-gradient {
@@ -43,36 +45,15 @@
   }
 
   .nav-link {
-    @apply text-light hover:text-primary transition-colors duration-300 relative rounded-lg px-3 py-2;
-  }
-
-  .nav-link::after {
-    @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 -translate-x-1/2;
-    content: '';
-  }
-
-  .nav-link:hover::after {
-    @apply w-3/4;
+    @apply text-gray-400 hover:text-light transition-colors duration-300 font-light tracking-wide text-sm;
   }
 
   .section {
-    @apply py-20 px-4;
+    @apply py-24 px-4;
   }
 
   .container {
-    @apply max-w-7xl mx-auto;
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
-  }
-
-  .animate-slide-up {
-    animation: slideUp 0.6s ease-out;
-  }
-
-  .animate-bounce-in {
-    animation: bounceIn 0.8s ease-out;
+    @apply max-w-5xl mx-auto;
   }
 }
 

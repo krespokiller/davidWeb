@@ -11,7 +11,7 @@ export const Heading: React.FC<HeadingProps> = ({
   level = 1,
   className = '',
 }) => {
-  const baseClasses = 'font-bold text-dark';
+  const baseClasses = 'font-light text-light tracking-tight';
 
   const levelClasses = {
     1: 'text-4xl md:text-5xl',

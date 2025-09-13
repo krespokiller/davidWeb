@@ -17,44 +17,40 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="card">
-      <Heading level={3} className="mb-6 text-gradient text-center">Send a Message</Heading>
+    <div className="space-y-6">
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-300">Name</label>
+        <div className="space-y-3">
           <Input
             type="text"
-            placeholder="Your Name"
+            placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
             className="w-full"
           />
         </div>
-        <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-300">Email</label>
+        <div className="space-y-3">
           <Input
             type="email"
-            placeholder="your.email@example.com"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
             className="w-full"
           />
         </div>
-        <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-300">Message</label>
+        <div className="space-y-3">
           <textarea
-            placeholder="Tell me about your project..."
+            placeholder="Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 resize-none text-light placeholder-gray-400 hover:bg-gray-800/70"
-            rows={5}
+            className="w-full px-4 py-3 bg-gray-800/30 border border-gray-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500 transition-all duration-300 resize-none text-light placeholder-gray-500 font-light text-sm"
+            rows={4}
             required
           />
         </div>
-        <div className="pt-2">
-          <Button type="submit" variant="primary">Send Message</Button>
+        <div className="pt-4">
+          <Button type="submit" variant="primary">Send</Button>
         </div>
       </form>
     </div>

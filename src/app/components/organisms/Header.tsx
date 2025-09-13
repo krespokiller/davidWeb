@@ -10,30 +10,31 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-dark/95 backdrop-blur-sm text-light py-6 px-4 border-b border-gray-700/50 sticky top-0 z-50">
-      <div className="container flex justify-between items-center">
-        <div className="hover:scale-105 transition-transform duration-300 cursor-pointer">
-          <Heading level={1} className="text-gradient text-2xl">David Santiago Vargas</Heading>
-          <p className="text-secondary mt-1 hover:text-primary transition-colors duration-200 text-sm">Software Engineer</p>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-xl border-b border-gray-800/50">
+      <div className="container flex justify-between items-center py-6">
+        <div className="cursor-pointer group">
+          <Heading level={1} className="text-xl font-light text-light tracking-wide group-hover:text-primary transition-colors duration-300">
+            David Santiago Vargas
+          </Heading>
         </div>
-        <nav className="hidden md:flex space-x-2">
+        <nav className="hidden md:flex items-center space-x-8">
           <button
-            className="nav-link"
+            className="text-gray-400 hover:text-light transition-colors duration-300 font-light tracking-wide text-sm"
             onClick={() => scrollToSection('experience')}
           >
             Experience
           </button>
           <button
-            className="nav-link"
+            className="text-gray-400 hover:text-light transition-colors duration-300 font-light tracking-wide text-sm"
             onClick={() => scrollToSection('contact')}
           >
             Contact
           </button>
         </nav>
         {/* Mobile menu button */}
-        <button className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        <button className="md:hidden p-2 rounded-full hover:bg-gray-800/50 transition-colors duration-300">
+          <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
