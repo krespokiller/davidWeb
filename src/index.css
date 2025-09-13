@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+@layer base {
+  html {
+    @apply bg-dark text-light;
+  }
+
+  body {
+    @apply bg-dark text-light;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-light hover:bg-secondary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-light hover:bg-accent transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .card {
+    @apply bg-gray-800 border border-gray-700 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .nav-link {
+    @apply text-light hover:text-primary transition-colors duration-300 relative;
+  }
+
+  .nav-link::after {
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+    content: '';
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
