@@ -6,7 +6,7 @@ export function Home() {
       <Header />
       <main className="container">
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4">
+        <section className="min-h-screen flex items-center justify-center px-6 md:px-4">
           <div className="container">
             <div className="text-center space-y-8 max-w-4xl mx-auto">
               <div className="space-y-4">
@@ -22,8 +22,24 @@ export function Home() {
                 with modern technologies and clean code.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-                <button className="btn-primary">View My Work</button>
-                <button className="btn-secondary">Get In Touch</button>
+                <button
+                  className="btn-primary"
+                  onClick={() => {
+                    const element = document.getElementById('experience');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  View My Work
+                </button>
+                <button
+                  className="btn-secondary"
+                  onClick={() => {
+                    const element = document.getElementById('contact');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Get In Touch
+                </button>
               </div>
             </div>
           </div>

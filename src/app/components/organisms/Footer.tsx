@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="py-12 px-4 border-t border-gray-800/30">
+    <footer className="py-12 px-6 md:px-4 border-t border-gray-800/30">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <p className="text-gray-500 text-sm font-light tracking-wide">
@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           </p>
           <div className="flex items-center space-x-6">
             <a
-              href="https://github.com/davidsantiagovargas1234"
+              href="https://github.com/krespokiller"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-light transition-colors duration-300"
@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/david-santiago-vargas"
+              href="https://www.linkedin.com/in/david-vargas-krespokiller"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-light transition-colors duration-300"

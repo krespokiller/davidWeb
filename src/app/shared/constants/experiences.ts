@@ -8,19 +8,6 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    company: 'Galgo',
-    role: 'Software Engineer',
-    dates: 'Dec 2023 – Sep 2025',
-    location: 'Remote',
-    description: [
-      'Checkout Team: Developed and maintained features in a Backend for Frontend (BFF) architecture using NestJS and Next.js, with a stronger focus on backend development in NestJS.',
-      'Risk Team: Maintained and supported multiple applications within a microservices ecosystem built on an event-driven architecture in AWS.',
-      'Worked with Taktile (decision-flow platform) and Retool (internal UI builder) to improve decision-making processes and internal operations.',
-      'Implemented monitoring and analytics solutions with Datadog and Amplitude to ensure system reliability and provide product insights.',
-      'Acted as a technical bridge, supporting both engineering teams and business executives in troubleshooting and solving operational issues.',
-    ],
-  },
-  {
     company: 'Trebet',
     role: 'Co-Founder / Software Engineer',
     dates: 'Sep 2024 – Present',
@@ -36,6 +23,19 @@ export const experiences: Experience[] = [
       'Added push notifications to enable reliable and instant user interactions.',
       'Managed AWS infrastructure, focusing on reliability, scalability, and smooth operations.',
       'Successfully delivered the application despite complex technical and organizational challenges.',
+    ],
+  },
+  {
+    company: 'Galgo',
+    role: 'Software Engineer',
+    dates: 'Dec 2023 – Sep 2025',
+    location: 'Remote',
+    description: [
+      'Checkout Team: Developed and maintained features in a Backend for Frontend (BFF) architecture using NestJS and Next.js, with a stronger focus on backend development in NestJS.',
+      'Risk Team: Maintained and supported multiple applications within a microservices ecosystem built on an event-driven architecture in AWS.',
+      'Worked with Taktile (decision-flow platform) and Retool (internal UI builder) to improve decision-making processes and internal operations.',
+      'Implemented monitoring and analytics solutions with Datadog and Amplitude to ensure system reliability and provide product insights.',
+      'Acted as a technical bridge, supporting both engineering teams and business executives in troubleshooting and solving operational issues.',
     ],
   },
   {

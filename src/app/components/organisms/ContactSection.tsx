@@ -4,7 +4,7 @@ import { ContactForm } from '../molecules';
 
 export const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="py-24 px-4">
+    <section id="contact" className="py-24 px-6 md:px-4">
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <Heading level={2} className="text-3xl md:text-4xl font-light text-light text-center mb-16 tracking-tight">
