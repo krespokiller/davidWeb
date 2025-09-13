@@ -12,7 +12,7 @@ pnpm-debug.log*
 .dev.vars
 
 # Vite build output
-dist
+# dist
 
 # TypeScript
 *.tsbuildinfo
