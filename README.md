@@ -1,6 +1,6 @@
 # David Santiago Vargas - Portfolio
 
-A modern, responsive portfolio website built with RedwoodJS SDK, React, TypeScript, Tailwind CSS, and Storybook. Features Atomic Design architecture for scalability and maintainability.
+A modern, responsive portfolio website built with React, TypeScript, Tailwind CSS, and Storybook. Features Atomic Design architecture for scalability and maintainability.
 
 ## Features
 
@@ -13,11 +13,12 @@ A modern, responsive portfolio website built with RedwoodJS SDK, React, TypeScri
 
 ## Tech Stack
 
-- **Framework**: RedwoodJS SDK
+- **Framework**: React 18
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS with custom color palette
+- **Styling**: Tailwind CSS v4 with custom color palette
 - **Component Library**: Storybook for development
 - **Build Tool**: Vite
+- **Package Manager**: Yarn
 
 ## Color Palette
 
@@ -31,31 +32,43 @@ A modern, responsive portfolio website built with RedwoodJS SDK, React, TypeScri
 
 ### Prerequisites
 
-- Node.js v22+ (due to Promise.withResolvers requirement)
-- pnpm
+- Node.js v22+
+- Yarn
 
 ### Installation
 
 ```shell
-pnpm install
+yarn install
 ```
 
 ### Development
 
 ```shell
-pnpm dev
+yarn dev
 ```
 
 ### Build for Production
 
 ```shell
-pnpm build
+yarn build
+```
+
+### Preview Production Build
+
+```shell
+yarn preview
 ```
 
 ### Storybook
 
 ```shell
-pnpm run storybook
+yarn storybook
+```
+
+### Build Storybook
+
+```shell
+yarn build-storybook
 ```
 
 ## Deployment to GitHub Pages

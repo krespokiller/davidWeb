@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #448C42;
+  --color-secondary: #6ED96A;
+  --color-accent: #7DF279;
+  --color-dark: #0C2604;
+  --color-light: #F2F2F2;
+}
+
 @layer base {
   html {
     @apply bg-dark text-light;
