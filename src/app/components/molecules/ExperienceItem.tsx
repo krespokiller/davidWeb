@@ -26,10 +26,10 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
     }
   };
   return (
-    <div className={`card group h-full flex flex-col transition-all duration-700 ease-in-out transform ${
+    <div className={`card group h-full flex flex-col transition-all duration-500 ease-out ${
       isExpanded
-        ? 'bg-gray-900/90 shadow-2xl scale-[1.02] border-gray-600/50'
-        : 'hover:shadow-xl hover:scale-[1.01] hover:bg-gray-900/60'
+        ? 'bg-gray-900/90 shadow-2xl border-gray-600/50'
+        : 'hover:shadow-xl hover:bg-gray-900/60'
     }`}>
       <div className={`flex flex-col ${isExpanded ? 'md:flex-row md:items-start md:gap-6' : 'sm:flex-row sm:justify-between sm:items-start'} mb-6 transition-all duration-700`}>
         <div className="flex-1 min-w-0">

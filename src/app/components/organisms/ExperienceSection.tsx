@@ -51,7 +51,7 @@ export const ExperienceSection: React.FC = () => {
                 return (
                   <div
                     key={index}
-                    className={`transition-all duration-700 ease-in-out ${
+                    className={`transition-all duration-500 ease-out ${
                       isExpanded ? 'md:col-span-2 lg:col-span-3' : ''
                     }`}
                   >
