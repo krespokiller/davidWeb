@@ -76,19 +76,24 @@ const experiences = [
 
 export const ExperienceSection: React.FC = () => {
   return (
-    <section id="experience" className="py-12 px-4 bg-gray-900">
-      <div className="max-w-6xl mx-auto">
-        <Heading level={2} className="mb-8 text-gradient">Professional Experience</Heading>
-        <div className="space-y-6">
+    <section id="experience" className="section animate-slide-up">
+      <div className="container">
+        <Heading level={2} className="mb-12 text-gradient text-center text-3xl md:text-4xl">Professional Experience</Heading>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {experiences.map((exp, index) => (
-            <ExperienceItem
+            <div
               key={index}
-              company={exp.company}
-              role={exp.role}
-              dates={exp.dates}
-              location={exp.location}
-              description={exp.description}
-            />
+              className="animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <ExperienceItem
+                company={exp.company}
+                role={exp.role}
+                dates={exp.dates}
+                location={exp.location}
+                description={exp.description}
+              />
+            </div>
           ))}
         </div>
       </div>

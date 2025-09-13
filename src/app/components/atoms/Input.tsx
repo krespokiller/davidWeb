@@ -19,9 +19,9 @@ export const Input: React.FC<InputProps> = ({
   className = '',
   required = false,
 }) => {
-  const baseClasses = 'w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200';
+  const baseClasses = 'w-full px-4 py-3 border border-gray-600 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 hover:border-gray-500';
 
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed bg-gray-100' : '';
+  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed bg-gray-800' : 'bg-gray-800/50 hover:bg-gray-800/70';
 
   return (
     <input
@@ -31,7 +31,7 @@ export const Input: React.FC<InputProps> = ({
       onChange={onChange}
       disabled={disabled}
       required={required}
-      className={`${baseClasses} bg-gray-700 border-gray-600 text-light placeholder-gray-400 focus:ring-primary focus:border-primary ${disabledClasses} ${className}`}
+      className={`${baseClasses} ${disabledClasses} text-light placeholder-gray-400 ${className}`}
     />
   );
 };

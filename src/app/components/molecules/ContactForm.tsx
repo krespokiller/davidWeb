@@ -17,32 +17,45 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="card p-6">
-      <Heading level={3} className="mb-4 text-gradient">Contact Me</Heading>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <Input
-          type="text"
-          placeholder="Your Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <Input
-          type="email"
-          placeholder="Your Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <textarea
-          placeholder="Your Message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 resize-none text-light placeholder-gray-400"
-          rows={4}
-          required
-        />
-        <Button type="submit" variant="primary">Send Message</Button>
+    <div className="card">
+      <Heading level={3} className="mb-6 text-gradient text-center">Send a Message</Heading>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="space-y-2">
+          <label className="block text-sm font-medium text-gray-300">Name</label>
+          <Input
+            type="text"
+            placeholder="Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className="w-full"
+          />
+        </div>
+        <div className="space-y-2">
+          <label className="block text-sm font-medium text-gray-300">Email</label>
+          <Input
+            type="email"
+            placeholder="your.email@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="w-full"
+          />
+        </div>
+        <div className="space-y-2">
+          <label className="block text-sm font-medium text-gray-300">Message</label>
+          <textarea
+            placeholder="Tell me about your project..."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 resize-none text-light placeholder-gray-400 hover:bg-gray-800/70"
+            rows={5}
+            required
+          />
+        </div>
+        <div className="pt-2">
+          <Button type="submit" variant="primary">Send Message</Button>
+        </div>
       </form>
     </div>
   );

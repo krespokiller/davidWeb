@@ -17,15 +17,21 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   location,
 }) => {
   return (
-    <div className="card p-6 mb-6">
-      <div className="flex justify-between items-start mb-2">
-        <Heading level={3} className="text-gradient">{role}</Heading>
-        <span className="text-sm text-gray-400">{dates}</span>
+    <div className="card group cursor-pointer">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+        <div className="flex-1">
+          <Heading level={3} className="text-gradient text-xl mb-2 group-hover:scale-105 transition-transform duration-300">{role}</Heading>
+          <p className="text-secondary font-semibold text-lg">{company}</p>
+          {location && <p className="text-gray-400 text-sm mt-1">{location}</p>}
+        </div>
+        <span className="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full mt-2 sm:mt-0 sm:ml-4 whitespace-nowrap">{dates}</span>
       </div>
-      <p className="text-secondary font-semibold mb-2">{company}{location && ` – ${location}`}</p>
-      <ul className="list-disc list-inside text-gray-300 space-y-1">
+      <ul className="space-y-2">
         {description.map((item, index) => (
-          <li key={index} className="hover:text-light transition-colors duration-200">{item}</li>
+          <li key={index} className="text-gray-300 leading-relaxed flex items-start">
+            <span className="text-primary mr-2 mt-1 flex-shrink-0">•</span>
+            <span className="hover:text-light transition-colors duration-200">{item}</span>
+          </li>
         ))}
       </ul>
     </div>

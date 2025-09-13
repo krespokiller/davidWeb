@@ -17,7 +17,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   type = 'button',
 }) => {
-  const baseClasses = 'font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseClasses = 'font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 transform hover:scale-105';
 
   const variantClasses = {
     primary: 'bg-primary text-light hover:bg-secondary focus:ring-primary',

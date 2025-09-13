@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #448C42;
-  --color-secondary: #6ED96A;
-  --color-accent: #7DF279;
-  --color-dark: #0C2604;
-  --color-light: #F2F2F2;
+  --color-primary: #10b981;
+  --color-secondary: #34d399;
+  --color-accent: #22c55e;
+  --color-dark: #0a0a0a;
+  --color-light: #ffffff;
+  --color-gray-800: #1f2937;
+  --color-gray-700: #374151;
+  --color-gray-600: #4b5563;
 }
 
 @layer base {
@@ -14,21 +17,25 @@
   }
 
   body {
-    @apply bg-dark text-light;
+    @apply bg-dark text-light font-sans antialiased;
+  }
+
+  * {
+    @apply border-border;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-light hover:bg-secondary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-primary text-light hover:bg-secondary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-xl px-6 py-3 font-medium;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-light hover:bg-accent transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-secondary text-light hover:bg-accent transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-xl px-6 py-3 font-medium;
   }
 
   .card {
-    @apply bg-gray-800 border border-gray-700 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102;
+    @apply bg-gray-800 border border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] p-6;
   }
 
   .text-gradient {
@@ -36,15 +43,69 @@
   }
 
   .nav-link {
-    @apply text-light hover:text-primary transition-colors duration-300 relative;
+    @apply text-light hover:text-primary transition-colors duration-300 relative rounded-lg px-3 py-2;
   }
 
   .nav-link::after {
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+    @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 -translate-x-1/2;
     content: '';
   }
 
   .nav-link:hover::after {
-    @apply w-full;
+    @apply w-3/4;
+  }
+
+  .section {
+    @apply py-20 px-4;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.8s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
