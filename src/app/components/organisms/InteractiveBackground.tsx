@@ -188,7 +188,7 @@ class CanvasRenderer {
     const controlX = midX + (controlDisplacement.x * curveIntensity);
     const controlY = midY + (controlDisplacement.y * curveIntensity);
 
-    this.ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+    this.ctx.strokeStyle = `rgba(255, 255, 255, 0.3141516)`;
     this.ctx.lineWidth = 0.8; // Reduced from 1.0 for more subtle effect
     this.ctx.lineCap = 'round';
 
