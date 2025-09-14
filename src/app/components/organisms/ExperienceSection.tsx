@@ -19,15 +19,22 @@ export const ExperienceSection: React.FC = () => {
 
           {/* Responsive Layout with expansion support */}
           {displayedExperiences.length === 2 ? (
-            // Centered layout for 2 items
-            <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-12 md:justify-center md:max-w-5xl md:mx-auto">
+            // Centered layout for 2 items with proper expansion
+            <div className="flex flex-col gap-6 mb-12 md:max-w-5xl md:mx-auto">
               {displayedExperiences.map((exp, index) => {
                 const isExpanded = expandedCard === index;
+                const otherCardExpanded = expandedCard !== null && expandedCard !== index;
+
+                // If another card is expanded, hide this one
+                if (otherCardExpanded) return null;
+
                 return (
                   <div
                     key={index}
                     className={`transition-all duration-700 ease-in-out ${
-                      isExpanded ? 'md:flex-1 md:max-w-3xl' : 'md:flex-1 md:max-w-2xl'
+                      isExpanded
+                        ? 'md:w-full md:max-w-none' // Take full width when expanded
+                        : 'md:w-full md:max-w-2xl md:mx-auto' // Centered when not expanded
                     }`}
                   >
                     <ExperienceItem

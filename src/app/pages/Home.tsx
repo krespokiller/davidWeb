@@ -1,9 +1,10 @@
-import { ExperienceSection, ContactSection, Footer } from "../components/organisms";
+import { ExperienceSection, ContactSection, Footer, InteractiveBackground } from "../components/organisms";
 
 export function Home() {
   return (
-    <div className="min-h-screen bg-dark">
-      <main className="container">
+    <div className="min-h-screen bg-dark relative">
+      <InteractiveBackground />
+      <main className="container relative z-20">
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-6 md:px-4">
           <div className="container">
