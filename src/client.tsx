@@ -1,7 +1,6 @@
-import "./index.css";
-import React from 'react';
+import "@/styles/index.css";
 import { createRoot } from 'react-dom/client';
-import { Home } from './app/pages/Home';
+import { Home } from '@/pages';
 
 const container = document.getElementById('root');
 if (container) {
