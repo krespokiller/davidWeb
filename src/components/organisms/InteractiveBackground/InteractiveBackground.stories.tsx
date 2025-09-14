@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import InteractiveBackground from './InteractiveBackground';
+import { InteractiveBackground } from './InteractiveBackground';
 
 const meta: Meta<typeof InteractiveBackground> = {
   title: 'Organisms/InteractiveBackground',
