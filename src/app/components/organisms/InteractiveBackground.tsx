@@ -130,13 +130,14 @@ class CanvasRenderer {
     const canvasHeight = this.ctx.canvas.height;
     const maxDistance = Math.sqrt(canvasWidth * canvasWidth + canvasHeight * canvasHeight);
 
-    // Global gravitational field: affect all lines within influence radius
-    const influenceRadius = maxDistance * 0.6; // Increased radius for global effect
+    // Expanded influence radius: cover much more area like before for better visibility
+    const nodeSpacing = 100; // Based on NodeGenerator.generateGrid spacing
+    const influenceRadius = nodeSpacing * 4.5; // ~450px radius covers ~60+ nodes for expansive effect
 
     lines.forEach((line) => {
       const distanceToPoint = GeometryUtils.getDistanceToLine(line, interactionPoint);
 
-      // Only skip lines that are way too far (for performance)
+      // Only skip lines that are way too far (for performance) - adjusted for node-based radius
       if (distanceToPoint > influenceRadius * 1.5) return;
 
       // Global influence: all lines within radius are affected
@@ -150,8 +151,8 @@ class CanvasRenderer {
   }
 
   private renderLine(line: Line, influence: number, interactionPoint: Point): void {
-    // Temporarily increased for debugging curve visibility
-    const alpha = influence * 0.3; // Increased temporarily to see curves
+    // High visibility opacity for strong repulsion effect
+    const alpha = influence * 0.35; // Much more visible for dramatic effect
 
     if (alpha < 0.01) return; // Lower threshold for debugging
 
@@ -182,8 +183,8 @@ class CanvasRenderer {
       distanceToControl
     );
 
-    // Amplify the control point displacement for more visible outward curves
-    const curveIntensity = 3.0; // Higher multiplier for outward repulsion effect
+    // High intensity for dramatic repulsion effect
+    const curveIntensity = 4.2; // Much higher intensity for visible curves with strong displacement
     const controlX = midX + (controlDisplacement.x * curveIntensity);
     const controlY = midY + (controlDisplacement.y * curveIntensity);
 
@@ -208,8 +209,8 @@ class CanvasRenderer {
       const nodeInfluence = Math.max(0, 1 - (nodeDistance / maxNodeDistance));
 
       if (nodeInfluence > 0.02) { // Higher threshold for performance
-        // More subtle opacity for crystal-like effect
-        const nodeAlpha = nodeInfluence * 0.08; // Reduced from 0.15 for more subtle effect
+        // High visibility for strong repulsion effect
+        const nodeAlpha = nodeInfluence * 0.12; // Increased for better visibility of node movement
 
         if (nodeAlpha < 0.005) return; // Appropriate threshold for subtle effect
 
@@ -234,9 +235,9 @@ class CanvasRenderer {
   private calculateGravitationalDisplacement(point: Node | Point, mousePoint: Point, distance: number): { x: number; y: number } {
     if (distance === 0) return { x: 0, y: 0 };
 
-    // Gravitational constant (increased for curve visibility)
-    const G = 4.0; // Increased for more pronounced curves
-    const maxDisplacement = 25; // Increased for more visible displacement
+    // Gravitational constant (dramatically increased for strong repulsion)
+    const G = 12.0; // Much stronger gravitational force for visible repulsion
+    const maxDisplacement = 60; // Much larger displacement for dramatic effect
 
     // Calculate direction vector from point to mouse
     const dx = mousePoint.x - point.x;
