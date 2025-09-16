@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
     dates: 'Sep 2024 – Present',
     location: 'Bogotá, Colombia',
     description: [
-      'Led and coordinated a team of 5 engineers, ensuring alignment and delivery of the platform.',
+      'Lead and coordinated a team of 5 engineers, ensuring alignment and delivery of the platform.',
       'Collaborated directly with stakeholders to fully understand business needs and define technical solutions.',
       'Developed and maintained a mobile application using React Native.',
       'Built backend services on a dedicated PHP domain to support the platform’s core features.',
