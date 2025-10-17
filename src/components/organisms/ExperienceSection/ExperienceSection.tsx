@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Heading, Button } from '@/components/atoms';
 import { ExperienceItem } from '@/components/molecules';
-import { experiences } from '@/const';
 
 export const ExperienceSection: React.FC = () => {
+  const { t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const initialDisplayCount = 2; // Mostrar solo 2 cards por defecto
+  const experiences = t('experiences', { returnObjects: true }) as any[];
   const displayedExperiences = showAll ? experiences : experiences.slice(0, initialDisplayCount);
 
   return (
@@ -14,7 +16,7 @@ export const ExperienceSection: React.FC = () => {
       <div className="container">
         <div className="max-w-7xl mx-auto">
           <Heading level={2} className="text-3xl md:text-4xl font-light text-light text-center mb-16 tracking-tight">
-            Experience
+            {t('experience.title')}
           </Heading>
 
           {/* Responsive Layout with expansion support */}
@@ -85,7 +87,7 @@ export const ExperienceSection: React.FC = () => {
                   onClick={() => setShowAll(!showAll)}
                   variant="secondary"
                 >
-                  {showAll ? 'Ver Menos' : `Ver Todas las Experiencias (${experiences.length})`}
+                  {showAll ? t('experience.showLess') : `${t('experience.showAll')} (${experiences.length})`}
                 </Button>
               </div>
             </div>

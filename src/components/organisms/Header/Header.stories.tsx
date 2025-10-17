@@ -24,16 +24,13 @@ export const Default: Story = {
   args: {},
 };
 
-export const WithScrollTarget: Story = {
+export const WithLanguageToggle: Story = {
   decorators: [
     (Story) => (
       <div>
         <Story />
-        <div id="experience" style={{ height: '500px', background: '#1a1a1a', padding: '20px' }}>
-          Experience Section
-        </div>
-        <div id="contact" style={{ height: '500px', background: '#2a2a2a', padding: '20px' }}>
-          Contact Section
+        <div style={{ height: '200px', background: '#1a1a1a', padding: '20px', color: 'white' }}>
+          Language Toggle Demo - Click the button in the top-right to switch between ES/EN
         </div>
       </div>
     ),

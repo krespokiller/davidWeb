@@ -1,8 +1,12 @@
-import { ExperienceSection, ContactSection, Footer, InteractiveBackground } from "@/components";
+import { useTranslation } from 'react-i18next';
+import { ExperienceSection, Footer, InteractiveBackground, Header } from "@/components";
 
 export function Home() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-dark relative">
+      <Header />
       <InteractiveBackground />
       <main className="container relative z-20">
         {/* Hero Section */}
@@ -11,10 +15,10 @@ export function Home() {
             <div className="text-center space-y-8 max-w-4xl mx-auto">
               <div className="space-y-4 group cursor-default">
                 <h1 className="text-5xl md:text-7xl font-light text-light tracking-tight">
-                  David Santiago Vargas
+                  {t('hero.name')}
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide group-hover:text-light transition-colors duration-300">
-                  Software Engineer
+                  {t('hero.title')}
                 </p>
               </div>
               <div className="flex justify-center pt-8">
@@ -25,7 +29,7 @@ export function Home() {
                     element?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  View My Work
+                  {t('hero.viewWork')}
                 </button>
               </div>
             </div>
@@ -33,7 +37,6 @@ export function Home() {
         </section>
 
         <ExperienceSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>
