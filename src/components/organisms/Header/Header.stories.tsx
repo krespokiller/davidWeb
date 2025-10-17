@@ -24,13 +24,18 @@ export const Default: Story = {
   args: {},
 };
 
-export const WithLanguageToggle: Story = {
+export const TransparentWithLanguageToggle: Story = {
   decorators: [
     (Story) => (
-      <div>
+      <div style={{ background: '#0C2604', minHeight: '100vh', position: 'relative' }}>
         <Story />
-        <div style={{ height: '200px', background: '#1a1a1a', padding: '20px', color: 'white' }}>
-          Language Toggle Demo - Click the button in the top-right to switch between ES/EN
+        <div style={{ height: '400px', background: '#1a1a1a', padding: '20px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ textAlign: 'center' }}>
+            <h3>Header Component Demo</h3>
+            <p>The header is transparent and positioned at the top.</p>
+            <p>Look for the language toggle button (🌐 ES/EN) in the top-right corner.</p>
+            <p>Click it to switch between English and Spanish.</p>
+          </div>
         </div>
       </div>
     ),

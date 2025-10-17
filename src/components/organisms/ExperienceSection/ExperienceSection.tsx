@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Heading, Button } from '@/components/atoms';
 import { ExperienceItem } from '@/components/molecules';
+import { Experience } from '@/models';
 
 export const ExperienceSection: React.FC = () => {
   const { t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
-  const initialDisplayCount = 2; // Mostrar solo 2 cards por defecto
-  const experiences = t('experiences', { returnObjects: true }) as any[];
+  const initialDisplayCount = 2;
+
+  const experiences = t('experiences', { returnObjects: true }) as Experience[];
   const displayedExperiences = showAll ? experiences : experiences.slice(0, initialDisplayCount);
 
   return (

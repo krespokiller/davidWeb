@@ -24,12 +24,15 @@ export const Default: Story = {
   args: {},
 };
 
-export const InFullPage: Story = {
+export const AtBottomOfPage: Story = {
   decorators: [
     (Story) => (
       <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ flex: 1, background: '#1a1a1a', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
-          Main Content Area
+        <div style={{ flex: 1, background: '#0C2604', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', padding: '20px' }}>
+          <div style={{ textAlign: 'center' }}>
+            <h2>Main Content Area</h2>
+            <p>This represents the main portfolio content above the footer.</p>
+          </div>
         </div>
         <Story />
       </div>
