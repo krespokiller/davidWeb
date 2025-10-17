@@ -1,0 +1,80 @@
+{
+  "experiences": [
+    {
+      "company": "Trebet",
+      "role": "Co-Fundador / Ingeniero de Software",
+      "dates": "Sep 2024 – Sep 2025",
+      "location": "Bogotá, Colombia",
+      "description": [
+        "Lideré y coordiné un equipo de 5 ingenieros, asegurando la alineación y entrega de la plataforma.",
+        "Colaboré directamente con las partes interesadas para comprender completamente las necesidades del negocio y definir soluciones técnicas.",
+        "Desarrollé y mantuve una aplicación móvil utilizando React Native.",
+        "Construí servicios backend en un dominio PHP dedicado para apoyar las características principales de la plataforma.",
+        "Implementé un sistema de intercomunicación aprovechando WebRTC para comunicación en tiempo real.",
+        "Configuré y gestioné servidores TURN/STUN para garantizar la estabilidad de la conexión.",
+        "Integré WebSockets para una comunicación eficiente entre pares.",
+        "Agregué notificaciones push para permitir interacciones confiables e instantáneas con los usuarios.",
+        "Gestioné la infraestructura de AWS, enfocándome en la confiabilidad, escalabilidad y operaciones fluidas.",
+        "Entregué exitosamente la aplicación a pesar de desafíos técnicos y organizacionales complejos."
+      ]
+    },
+    {
+      "company": "Galgo",
+      "role": "Ingeniero de Software",
+      "dates": "Dic 2023 – Sep 2025",
+      "location": "Remoto",
+      "description": [
+        "Equipo de Checkout: Desarrollé y mantuve características en una arquitectura Backend for Frontend (BFF) usando NestJS y Next.js, con un enfoque más fuerte en el desarrollo backend en NestJS.",
+        "Equipo de Riesgo: Mantuve y apoyé múltiples aplicaciones dentro de un ecosistema de microservicios construido en una arquitectura impulsada por eventos en AWS.",
+        "Trabajé con Taktile (plataforma de flujo de decisiones) y Retool (constructor de UI interno) para mejorar los procesos de toma de decisiones y operaciones internas.",
+        "Implementé soluciones de monitoreo y análisis con Datadog y Amplitude para asegurar la confiabilidad del sistema y proporcionar insights del producto.",
+        "Actué como puente técnico, apoyando tanto a los equipos de ingeniería como a los ejecutivos de negocio en la resolución de problemas y solución de problemas operativos."
+      ]
+    },
+    {
+      "company": "Loopay",
+      "role": "Desarrollador Full Stack",
+      "dates": "Ene 2023 – 2024",
+      "location": "Remoto",
+      "description": [
+        "Mejoré y extendí una aplicación existente construida con RedwoodJS.",
+        "Desarrollé características usando GraphQL, Prisma, Node.js y React.",
+        "Optimizé las interacciones de base de datos con Prisma y manejé la lógica backend con Node.js.",
+        "Construí interfaces responsivas y amigables para el usuario con React."
+      ]
+    },
+    {
+      "company": "Tribuu Technologies",
+      "role": "Desarrollador Full Stack",
+      "dates": "2021 – 2022",
+      "location": "Remoto",
+      "description": [
+        "Lideré el desarrollo de una Aplicación de Página Única (SPA) con Angular, Express y MongoDB.",
+        "Diseñé e implementé una arquitectura de microservicios para mejorar la escalabilidad y modularidad.",
+        "Integré Algolia para búsqueda avanzada y mejoré la capacidad de descubrimiento de contenido.",
+        "Incrusté capacidades de videoconferencia integrando APIs de Zoom."
+      ]
+    },
+    {
+      "company": "Freelance",
+      "role": "Desarrollador Web",
+      "dates": "2020",
+      "location": "Remoto",
+      "description": [
+        "Diseñé y desarrollé una página de destino para un taller de camiones usando HTML, CSS y JavaScript vanilla.",
+        "Integré un botón de chat de WhatsApp para soporte al cliente.",
+        "Construí una tienda de ropa en línea con PrestaShop, aumentando la visibilidad y permitiendo ventas en línea."
+      ]
+    },
+    {
+      "company": "Freelance",
+      "role": "Desarrollador CMS",
+      "dates": "2018 – 2019",
+      "location": "Remoto",
+      "description": [
+        "Desarrollé una plataforma de comercio electrónico discreta para sex-shop usando WordPress y WooCommerce.",
+        "Implementé diseño responsivo y medidas de seguridad para una experiencia minorista en línea confidencial."
+      ]
+    }
+  ]
+}
