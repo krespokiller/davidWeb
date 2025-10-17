@@ -20,9 +20,9 @@ export const Button: React.FC<ButtonProps> = ({
   const baseClasses = 'font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-offset-2';
 
   const variantClasses = {
-    primary: 'bg-primary text-light hover:bg-secondary focus:ring-primary',
-    secondary: 'bg-secondary text-light hover:bg-accent focus:ring-secondary',
-    accent: 'bg-accent text-dark hover:bg-secondary focus:ring-accent',
+    primary: 'bg-primary text-light hover:bg-primary/80 focus:ring-primary',
+    secondary: 'bg-secondary text-light hover:bg-secondary/80 focus:ring-secondary',
+    accent: 'bg-accent text-dark hover:bg-accent/80 focus:ring-accent',
   };
 
   const sizeClasses = {

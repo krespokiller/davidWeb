@@ -7,7 +7,8 @@
   "experience": {
     "title": "Experience",
     "showAll": "View All Experiences",
-    "showLess": "View Less"
+    "showLess": "Show Less",
+    "showMore": "Show {{count}} more"
   },
   "footer": {
     "copyright": "© 2025 David Santiago Vargas"

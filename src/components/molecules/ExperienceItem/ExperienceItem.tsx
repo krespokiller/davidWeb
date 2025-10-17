@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Heading } from '@/components/atoms';
 import { Experience } from '@/models';
 
@@ -16,6 +17,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   isExpanded = false,
   onToggleExpand,
 }) => {
+  const { t } = useTranslation();
   const maxItemsToShow = 3;
   const shouldShowExpandButton = description.length > maxItemsToShow;
   const displayedDescription = isExpanded ? description : description.slice(0, maxItemsToShow);
@@ -77,7 +79,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
               onClick={handleToggleExpand}
               className="text-primary hover:text-secondary transition-all duration-300 text-sm font-medium hover:underline px-3 py-2 rounded-lg hover:bg-gray-800/50"
             >
-              {isExpanded ? 'Ver menos' : `Ver ${description.length - maxItemsToShow} más`}
+              {isExpanded ? t('experience.showLess') : t('experience.showMore', { count: description.length - maxItemsToShow })}
             </button>
           </div>
         )}
